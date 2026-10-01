@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameTrack · Projeto de Luiz Perantoni</title>
+    <meta name="description" content="GameTrack — interface front-end para catalogar e avaliar jogos, feita com HTML, CSS e Bootstrap.">
+    <link rel="stylesheet" href="detalhe.css">
+</head>
+<body>
+    <header>
+        <a class="voltar" href="../Portfólio do Luiz.html#projetos">
+            <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Voltar ao portfólio
+        </a>
+        <span class="breadcrumb"><a href="../Portfólio do Luiz.html">Luiz Perantoni</a> / Projetos / GameTrack</span>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div>
+                <p class="hero-tag">Projeto pessoal · Front-end</p>
+                <h1>GameTrack</h1>
+                <p class="hero-sub">Interface de uma plataforma para catalogar e avaliar jogos, com busca, destaques da semana, melhores avaliados e reviews da comunidade.</p>
+            </div>
+            <ul class="hero-chips">
+                <li>HTML</li><li>CSS</li><li>Bootstrap</li>
+            </ul>
+            <figure class="capa">
+                <img src="../img/Capa GameTrack.png" alt="Capa do projeto GameTrack">
+            </figure>
+            <div class="links-topo">
+                <a class="btn-link principal" href="gametrack-site/index.html" target="_blank" rel="noopener">Abrir demonstração</a>
+            </div>
+        </section>
+
+        <section id="sobre">
+            <h2 class="titulo-secao">Sobre o projeto</h2>
+            <p>O <strong>GameTrack</strong> é a interface de uma plataforma inspirada em serviços de catalogação de jogos: o usuário pesquisa títulos, acompanha os jogos populares da semana, vê os mais bem avaliados pela comunidade e lê reviews de outros jogadores. O foco do projeto foi construir uma página inicial completa e responsiva, com cards de capa, estatísticas de visualizações/curtidas e avaliação em estrelas para cada título.</p>
+        </section>
+
+        <section id="estrutura">
+            <h2 class="titulo-secao">Estrutura da página</h2>
+            <div class="grid-2">
+                <div class="card"><h3>Cabeçalho e busca</h3><p>Barra de pesquisa de jogos, navegação para catálogo, criação de conta e login, sempre visível no topo.</p></div>
+                <div class="card"><h3>Hero</h3><p>Chamada de destaque convidando o usuário a avaliar jogos já jogados e salvar os que ainda quer jogar.</p></div>
+                <div class="card"><h3>Populares da semana</h3><p>Grade de cards de capa com visualizações, curtidas e nota média de cada jogo em destaque.</p></div>
+                <div class="card"><h3>Mais bem avaliados &amp; reviews</h3><p>Seções dedicadas aos títulos com melhor nota da comunidade e aos comentários mais recentes dos jogadores.</p></div>
+            </div>
+        </section>
+
+        <section id="galeria">
+            <h2 class="titulo-secao">Catálogo de jogos</h2>
+            <p class="muted">Alguns dos títulos usados para compor a vitrine de capas do protótipo.</p>
+            <div class="galeria">
+                <img src="img-gametrack/Elden_ring.jpg" alt="Capa de Elden Ring">
+                <img src="img-gametrack/Dark_souls_remastered.jpg" alt="Capa de Dark Souls Remastered">
+                <img src="img-gametrack/Hollow_knight.jpg" alt="Capa de Hollow Knight">
+                <img src="img-gametrack/Red_Dead_Redemption_II.jpg" alt="Capa de Red Dead Redemption II">
+                <img src="img-gametrack/Silksong.jpg" alt="Capa de Silksong">
+                <img src="img-gametrack/The_last_of_us.jpg" alt="Capa de The Last of Us">
+            </div>
+        </section>
+
+        <section id="tecnico">
+            <h2 class="titulo-secao">Detalhes técnicos</h2>
+            <p>A página foi construída em HTML e CSS puro, utilizando o framework <strong>Bootstrap 5</strong> para a grade responsiva e componentes de layout, com estilos próprios para os cards de jogo, overlays de estatísticas e o cabeçalho fixo de navegação. O objetivo foi treinar organização de layout em grade, hierarquia visual de conteúdo e componentização de cards reutilizáveis — habilidades centrais de front-end antes de evoluir para frameworks como Angular, usado no projeto WearDon.</p>
+        </section>
+
+        <div class="rodape-nav">
+            <a class="btn-link" href="weardon.html">← WearDon</a>
+            <a class="btn-link" href="../Portfólio do Luiz.html#projetos">Todos os projetos</a>
+            <a class="btn-link" href="semaforo.html">Semáforo Inteligente →</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Luiz - Toledo, Paraná</p>
+    </footer>
+</body>
+</html>

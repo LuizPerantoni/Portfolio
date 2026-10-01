@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GasolinIA · Projeto de Luiz Perantoni</title>
+    <meta name="description" content="GasolinIA — previsão de consumo de combustível com regressão linear múltipla, feito para Raciocínio Matemático para Computação.">
+    <link rel="stylesheet" href="detalhe.css">
+</head>
+<body>
+    <header>
+        <a class="voltar" href="../Portfólio do Luiz.html#projetos">
+            <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Voltar ao portfólio
+        </a>
+        <span class="breadcrumb"><a href="../Portfólio do Luiz.html">Luiz Perantoni</a> / Projetos / GasolinIA</span>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div>
+                <p class="hero-tag">Projeto em dupla · Machine Learning</p>
+                <h1>GasolinIA</h1>
+                <p class="hero-sub">Modelo de machine learning que prevê o consumo de combustível (km/L) de um veículo com base em cinco características técnicas, usando regressão linear múltipla.</p>
+            </div>
+            <ul class="hero-chips">
+                <li>Python</li><li>scikit-learn</li><li>Regressão Linear</li><li>Álgebra Linear</li><li>Streamlit</li>
+            </ul>
+            <figure class="capa">
+                <img src="../img/Capa GasolinIA.png" alt="Capa do projeto GasolinIA">
+            </figure>
+            <p class="muted">Kauan Magri · Luiz Felipe — Raciocínio Matemático para Computação, Prof. Eduardo Z. Sartoretto, 2026.</p>
+            <div class="links-topo">
+                <a class="btn-link principal" href="../GasolinIA/GasolinIA.pdf" target="_blank" rel="noopener">Apresentação (PDF)</a>
+                <a class="btn-link" href="../GasolinIA/relatorio_tde3.pdf" target="_blank" rel="noopener">Relatório técnico (PDF)</a>
+            </div>
+        </section>
+
+        <section id="problema">
+            <h2 class="titulo-secao">O problema</h2>
+            <p>Prever o consumo médio de combustível de um veículo que o modelo nunca viu antes, com base apenas nas suas características técnicas — sem precisar testá-lo na prática. É um problema de <strong>regressão supervisionada</strong>: a saída (km/L) é um valor numérico contínuo, não uma categoria.</p>
+            <div class="grid-3">
+                <div class="card"><h3>Economia</h3><p>Ajuda motoristas a escolher carros mais eficientes antes da compra.</p></div>
+                <div class="card"><h3>Sustentabilidade</h3><p>Menor consumo estimado significa menos emissões de CO₂.</p></div>
+                <div class="card"><h3>Automação</h3><p>A IA substitui testes físicos de consumo, que são custosos e demorados.</p></div>
+            </div>
+        </section>
+
+        <section id="dados">
+            <h2 class="titulo-secao">Dados utilizados</h2>
+            <p>A base foi construída com <strong>15 veículos reais do mercado brasileiro</strong>, do Fiat Uno ao BMW M3 e à Ford F-150 — uma matriz de features X de 15×5, acima do mínimo de 10×5 exigido pelo trabalho.</p>
+            <div class="tabela-wrap">
+                <table class="tabela">
+                    <thead><tr><th>Feature</th><th>Tipo</th><th>Descrição</th><th>Exemplo</th></tr></thead>
+                    <tbody>
+                        <tr><td>Cilindrada (L)</td><td>Numérica</td><td>Tamanho do motor em litros</td><td>1.0 a 5.0</td></tr>
+                        <tr><td>Peso (kg)</td><td>Numérica</td><td>Massa total do veículo</td><td>870 a 2200 kg</td></tr>
+                        <tr><td>Potência (cv)</td><td>Numérica</td><td>Força do motor em cavalos-vapor</td><td>65 a 510 cv</td></tr>
+                        <tr><td>Aceleração (s)</td><td>Numérica</td><td>Tempo de 0 a 100 km/h</td><td>3.9 a 15.0 s</td></tr>
+                        <tr><td>Ano do modelo</td><td>Numérica</td><td>Ano de fabricação do veículo</td><td>2010 a 2023</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="muted">Variável alvo (y): consumo médio em km/L de cada veículo — o valor que o modelo aprende a prever a partir das cinco features acima.</p>
+        </section>
+
+        <section id="modelo">
+            <h2 class="titulo-secao">Modelo e treinamento</h2>
+            <p>O modelo utilizado é a <strong>Regressão Linear Múltipla</strong>, implementada com <code>LinearRegression</code> do scikit-learn. O treinamento segue a equação:</p>
+            <pre class="codigo">ŷ = β₀ + β₁·Cilindrada + β₂·Peso + β₃·Potência + β₄·Aceleração + β₅·Ano</pre>
+            <p>Os coeficientes β são calculados pelo método dos <strong>Mínimos Quadrados Ordinários (OLS)</strong>, que minimiza a soma dos erros ao quadrado entre o valor previsto e o valor real.</p>
+            <div class="linha-tempo">
+                <div class="passo"><span class="num">1</span><h4>Entrada</h4><p>Matriz X (15×5 features)</p></div>
+                <div class="passo"><span class="num">2</span><h4>Treino</h4><p>70% dos dados (10 carros)</p></div>
+                <div class="passo"><span class="num">3</span><h4>OLS</h4><p>Minimiza a soma dos erros²</p></div>
+                <div class="passo"><span class="num">4</span><h4>Coef. β</h4><p>Pesos de cada feature</p></div>
+                <div class="passo"><span class="num">5</span><h4>Previsão</h4><p>ŷ = β₀ + β₁x₁ + ... + β₅x₅</p></div>
+            </div>
+            <p class="muted">Split: 70% treino (10 carros) · 30% teste (5 carros) · random_state = 42</p>
+        </section>
+
+        <section id="resultados">
+            <h2 class="titulo-secao">Resultados</h2>
+            <div class="grid-3">
+                <div class="stat"><span class="valor">0.9944</span><span class="legenda">R² no treino — 99,4% da variância explicada</span></div>
+                <div class="stat"><span class="valor">0.8462</span><span class="legenda">R² no teste — 84,6% da variância explicada</span></div>
+                <div class="stat"><span class="valor">1.18 km/L</span><span class="legenda">RMSE — erro médio nas previsões de teste</span></div>
+            </div>
+            <div class="tabela-wrap" style="margin-top:25px;">
+                <table class="tabela">
+                    <thead><tr><th>Carro</th><th>Real (km/L)</th><th>Previsto (km/L)</th><th>Erro</th></tr></thead>
+                    <tbody>
+                        <tr><td>Fiat Uno</td><td>14.2</td><td>14.1</td><td>-0.1</td></tr>
+                        <tr><td>Onix</td><td>12.8</td><td>12.9</td><td>+0.1</td></tr>
+                        <tr><td>Honda Civic</td><td>10.5</td><td>10.4</td><td>-0.1</td></tr>
+                        <tr><td>Toyota SW4</td><td>7.2</td><td>4.6</td><td>-2.6</td></tr>
+                        <tr><td>BMW M3</td><td>6.2</td><td>6.2</td><td>0.0</td></tr>
+                        <tr><td>Ford F-150</td><td>5.8</td><td>5.7</td><td>-0.1</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>A interpretação dos coeficientes mostrou que veículos mais pesados tendem a consumir mais, carros que demoram mais para acelerar (geralmente com motores menores) tendem a ser mais econômicos, e veículos mais novos são, em média, mais eficientes.</p>
+        </section>
+
+        <section id="limitacoes">
+            <h2 class="titulo-secao">Limitações do modelo</h2>
+            <ul class="lista">
+                <li><strong>Base pequena:</strong> com apenas 15 amostras, o modelo pode não generalizar bem para veículos muito diferentes dos presentes no dataset.</li>
+                <li><strong>Linearidade:</strong> a regressão linear assume uma relação linear entre features e consumo, o que pode não valer em todos os casos.</li>
+                <li><strong>Features ausentes:</strong> tipo de combustível, tração 4x4, tipo de transmissão e condições de uso não foram considerados.</li>
+                <li><strong>Outlier:</strong> o Toyota SW4 teve o maior erro (-2.6 km/L), provavelmente por ser um veículo pesado com motor relativamente econômico para seu porte.</li>
+            </ul>
+            <div class="aviso">Projeto acadêmico com fins didáticos, desenvolvido para a disciplina de Raciocínio Matemático para Computação — PUCPR, 2026.</div>
+        </section>
+
+        <div class="rodape-nav">
+            <a class="btn-link" href="semaforo.html">← Semáforo Inteligente</a>
+            <a class="btn-link" href="../Portfólio do Luiz.html#projetos">Todos os projetos</a>
+            <a class="btn-link" href="weardon.html">WearDon →</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Luiz - Toledo, Paraná</p>
+    </footer>
+</body>
+</html>

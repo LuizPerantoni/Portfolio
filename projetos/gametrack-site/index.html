@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>GameTrack</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="#" id="logo"><h2>GameTrack</h2></a>
+        </div>
+
+        <div class="search-wrap">
+            <input type="text" id="search" placeholder="Pesquisar jogos...">
+            <button class="search-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                </svg>
+            </button>
+        </div>
+
+        <nav class="nav-links">
+            <a href="#">Catálogo</a>
+            <a href="#">Criar conta</a>
+            <a href="#" class="btn-login">Fazer Login</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="img/Minecraft.img" alt="imagem ilustrativa do jogo Minecraft">
+            <div class="hero-text">
+                <h1>Avalie jogos que você já jogou.</h1>
+                <h1>Salve aqueles que você quer jogar.</h1>
+                <h1>Fale para seus amigos o que é bom.</h1>
+                <button class="btn-join">Junte-se a nós</button>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <h2>Populares essa semana</h2>
+            <div class="row">
+                <div class="col">
+                    <div class="game-card">
+                        <a href="elden_ring.html">
+                            <img src="img/Elden_ring.jpg" alt="capa do jogo Elden Ring">
+                            <div class="game-overlay">
+                                <p class="stat">👁 83.04k</p>
+                                <p class="stat">❤ 30.93k</p>
+                            </div>
+                        </a>
+                        <p class="game-name">Elden Ring</p>
+                        <p class="game-rating">★★★★★<span>1567 Avaliações</span></p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="game-card">
+                        <a href="gta_v.html">
+                            <img src="img/Grand_Theft_Auto_V.png" alt="capa do jogo GTA 5">
+                            <div class="game-overlay">
+                                <p class="stat">👁 61.20k</p>
+                                <p class="stat">❤ 22.10k</p>
+                            </div>
+                        </a>
+                        <p class="game-name">GTA V</p>
+                        <p class="game-rating">★★★★☆<span>2mil Avaliações</span></p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="game-card">
+                        <a href="hollow_knight.html">
+                            <img src="img/Hollow_knight.jpg" alt="capa do jogo Hollow Knight">
+                            <div class="game-overlay">
+                                <p class="stat">👁 45.70k</p>
+                                <p class="stat">❤ 19.40k</p>
+                            </div>
+                        </a>
+                        <p class="game-name">Hollow Knight</p>
+                        <p class="game-rating">★★★★★<span>580 Avaliações</span></p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="game-card">
+                        <a href="red_dead_redemption_2.html">
+                            <img src="img/Red_Dead_Redemption_II.jpg" alt="capa do jogo Red Dead Redemption 2">
+                            <div class="game-overlay">
+                                <p class="stat">👁 72.85k</p>
+                                <p class="stat">❤ 28.15k</p>
+                            </div>
+                        </a>
+                        <p class="game-name">Red Dead Redemption 2</p>
+                        <p class="game-rating">★★★★★<span>1790 Avaliações</span></p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="game-card">
+                        <a href="the_last_of_us.html">
+                            <img src="img/The_last_of_us.jpg" alt="capa do jogo The Last of Us">
+                            <div class="game-overlay">
+                                <p class="stat">👁 58.30k</p>
+                                <p class="stat">❤ 21.60k</p>
+                            </div>
+                        </a>
+                        <p class="game-name">The Last of Us</p>
+                        <p class="game-rating">★★★★☆<span>245 Avaliações</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="game-card">
+                        <a href="silksong.html">
+                            <img src="img/Silksong.jpg" alt="capa do jogo Silksong">
+                            <div class="game-overlay">
+                                <p class="stat">👁 39.50k</p>
+                                <p class="stat">❤ 17.80k</p>
+                            </div>
+                        </a>
+                        <p class="game-name">Silksong</p>
+                        <p class="game-rating">★★★★★<span>476 Avaliações</span></p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="game-card">
+                        <a href="resisente_evil_2_remake.html">
+                            <img src="img/Resident_evil_2_remake.png" alt="capa do jogo Resident Evil 2 Remake">
+                            <div class="game-overlay">
+                                <p class="stat">👁 33.10k</p>
+                                <p class="stat">❤ 14.90k</p>
+                            </div>
+                        </a>
+                        <p class="game-name">Resident Evil 2 Remake</p>
+                        <p class="game-rating">★★★★☆<span>321 Avaliações</span></p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="game-card">
+                        <a href="minecraft.html">
+                            <img src="img/minecraft_capa.jpg" alt="capa do jogo Minecraft">
+                            <div class="game-overlay">
+                                <p class="stat">👁 95.40k</p>
+                                <p class="stat">❤ 41.20k</p>
+                            </div>
+                        </a>
+                        <p class="game-name">Minecraft</p>
+                        <p class="game-rating">★★★★★<span>3457 Avaliações</span></p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="game-card">
+                        <a href="nine_sols.html">
+                            <img src="img/Nine_sols.jpg" alt="capa do jogo Nine Sols">
+                            <div class="game-overlay">
+                                <p class="stat">👁 21.60k</p>
+                                <p class="stat">❤ 9.80k</p>
+                            </div>
+                        </a>
+                        <p class="game-name">Nine Sols</p>
+                        <p class="game-rating">★★★★☆<span>254 Avaliações</span></p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="game-card">
+                        <a href="dark_souls_remastered.html">
+                            <img src="img/Dark_souls_remastered.jpg" alt="capa do jogo Dark Souls Remastered">
+                            <div class="game-overlay">
+                                <p class="stat">👁 27.90k</p>
+                                <p class="stat">❤ 12.30k</p>
+                            </div>
+                        </a>
+                        <p class="game-name">Dark Souls Remastered</p>
+                        <p class="game-rating">★★★★☆<span>350 Avaliações</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="top-rated">
+            <h2>Melhores avaliados</h2>
+            <div class="row">
+                <div class="col">
+                    <div class="rated-item">
+                        <a href="elden_ring.html">
+                            <img src="img/Elden_ring.jpg" alt="capa do jogo Elden Ring">
+                        </a>
+                        <p class="game-name">Elden Ring</p>
+                        <p class="game-rating">★★★★★<span>1567 Avaliações</span></p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="rated-item">
+                        <a href="hollow_knight.html">
+                            <img src="img/Hollow_knight.jpg" alt="capa do jogo Hollow Knight">
+                        </a>
+                        <p class="game-name">Hollow Knight</p>
+                        <p class="game-rating">★★★★★<span>580 Avaliações</span></p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="rated-item">
+                        <a href="the_last_of_us.html">
+                            <img src="img/The_last_of_us.jpg" alt="capa do jogo The Last of Us">
+                        </a>
+                        <p class="game-name">The Last of Us</p>
+                        <p class="game-rating">★★★★☆<span>245 Avaliações</span></p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="rated-item">
+                        <a href="red_dead_redemption_2.html">
+                            <img src="img/Red_Dead_Redemption_II.jpg" alt="capa do jogo Red Dead Redemption 2">
+                        </a>
+                        <p class="game-name">Red Dead Redemption 2</p>
+                        <p class="game-rating">★★★★★<span>1790 Avaliações</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reviews">
+            <h2>Reviews da comunidade</h2>
+            <div class="review-list">
+                <div class="review-card">
+                    <img src="img/Elden_ring.jpg" alt="capa do jogo Elden Ring">
+                    <div class="review-content">
+                        <p class="review-header"><strong>joaogamer</strong> avaliou Elden Ring <span class="review-stars">★★★★★</span></p>
+                        <p class="review-text">Um dos melhores mundos abertos que já joguei, cada canto tem algo pra descobrir.</p>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <img src="img/Hollow_knight.jpg" alt="capa do jogo Hollow Knight">
+                    <div class="review-content">
+                        <p class="review-header"><strong>anaplays</strong> avaliou Hollow Knight <span class="review-stars">★★★★★</span></p>
+                        <p class="review-text">Trilha sonora incrível e level design surpreendente do começo ao fim.</p>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <img src="img/The_last_of_us.jpg" alt="capa do jogo The Last of Us">
+                    <div class="review-content">
+                        <p class="review-header"><strong>lucas_dev</strong> avaliou The Last of Us <span class="review-stars">★★★★☆</span></p>
+                        <p class="review-text">História muito bem contada, mas a jogabilidade poderia ser mais variada.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#">Sobre</a>
+            <a href="#">Contato</a>
+            <a href="#">Termos de uso</a>
+            <a href="#">Privacidade</a>
+        </div>
+        <p>&copy; 2026 GameTrack. Projeto acadêmico.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WearDon · Projeto de Luiz Perantoni</title>
+    <meta name="description" content="WearDon — plataforma de doação de roupas e calçados. Front-end em Angular, API REST em Flask, protótipo em Figma.">
+    <link rel="stylesheet" href="detalhe.css">
+</head>
+<body>
+    <header>
+        <a class="voltar" href="../Portfólio do Luiz.html#projetos">
+            <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Voltar ao portfólio
+        </a>
+        <span class="breadcrumb"><a href="../Portfólio do Luiz.html">Luiz Perantoni</a> / Projetos / WearDon</span>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div>
+                <p class="hero-tag">Projeto em grupo · Em destaque</p>
+                <h1>WearDon</h1>
+                <p class="hero-sub">Plataforma web que conecta doadores e receptores de roupas e calçados, centralizando anúncios, histórico de doações e perfil em um único fluxo simples e organizado.</p>
+            </div>
+            <ul class="hero-chips">
+                <li>Angular</li><li>Flask</li><li>REST API</li><li>Figma</li><li>Python</li><li>ABNT</li>
+            </ul>
+            <figure class="capa">
+                <img src="../img/Capa WearDon.png" alt="Logo do projeto WearDon">
+            </figure>
+            <div class="links-topo">
+                <a class="btn-link principal" href="https://github.com/PedroPrasidos/projeto-doacao-roupas-calcados" target="_blank" rel="noopener">Repositório Front-end (Angular)</a>
+                <a class="btn-link" href="https://github.com/PedroPrasidos/api-projeto-doacao-roupas-calcados.git" target="_blank" rel="noopener">Repositório API (Flask)</a>
+                <a class="btn-link" href="https://www.figma.com/design/babwFlmMwolUcqzWkO6llk/Prototipagem-Projeto-Doacao-de-Roupas" target="_blank" rel="noopener">Protótipo no Figma</a>
+                <a class="btn-link" href="../WEAR DON/APRESENTACAO WEAR DON.pdf" target="_blank" rel="noopener">Apresentação (PDF)</a>
+                <a class="btn-link" href="../WEAR DON/WEARDON DOCUMENTACAO FRONT-END.pdf" target="_blank" rel="noopener">Doc. Front-end (PDF)</a>
+                <a class="btn-link" href="../WEAR DON/DOCUMENTAÇÃO API WEARDON - PROJETO DE DOAÇÃO DE ROUPAS E CALÇADOS.pdf" target="_blank" rel="noopener">Doc. API (PDF)</a>
+            </div>
+        </section>
+
+        <section id="sobre">
+            <h2 class="titulo-secao">Sobre o projeto</h2>
+            <p>Muitas pessoas possuem roupas e calçados em bom estado que poderiam ser doados, mas não sabem onde ou para quem doar. O <strong>WearDon</strong> nasceu para resolver exatamente essa dificuldade: conectar quem quer doar com quem precisa receber, de forma simples, organizada e centralizada em uma única plataforma.</p>
+            <p>O sistema foi desenhado em torno de dois perfis de usuário: o <strong>doador</strong>, que deseja se desapegar de vestuários, limpar o guarda-roupa ou simplesmente fazer uma ação de caridade; e o <strong>receptor</strong>, que deseja receber doações por necessidade ou interesse. Toda a jornada — do cadastro do item até a confirmação da doação — acontece dentro do app, com histórico de tudo o que foi doado e recebido.</p>
+            <p class="muted">Projeto desenvolvido por uma equipe de 7 alunos na disciplina de Engenharia de Software, PUCPR – Campus Toledo, 2026/01.</p>
+        </section>
+
+        <section id="arquitetura">
+            <h2 class="titulo-secao">Arquitetura</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Front-end · Angular</h3>
+                    <p>Interface do usuário construída em Angular, com telas de login, cadastro, home, detalhes de vestuário, histórico, perfil e seus respectivos pop-ups de confirmação. Cada tela foi mapeada 1:1 a um frame do protótipo no Figma.</p>
+                </div>
+                <div class="card">
+                    <h3>Back-end · API REST em Flask</h3>
+                    <p>API em Python/Flask responsável por usuários, vestuários e histórico de doações, com persistência dos dados em arquivo JSON entre reinicializações e validações de negócio em cada rota.</p>
+                </div>
+            </div>
+            <p style="margin-top:20px;">A documentação técnica segue o padrão ABNT e liga cada tela do Figma ao endpoint da API que ela consome — da autenticação até a confirmação de uma doação.</p>
+        </section>
+
+        <section id="funcionalidades">
+            <h2 class="titulo-secao">Principais funcionalidades</h2>
+            <ol class="lista">
+                <li>Cadastrar usuário</li>
+                <li>Logar usuário</li>
+                <li>Cadastrar vestuário (roupa ou calçado)</li>
+                <li>Listar e buscar vestuário específico</li>
+                <li>Atualizar ou deletar vestuário (enquanto não doado)</li>
+                <li>Atualizar dados de usuário</li>
+                <li>Cadastrar histórico de doação (relacionando doador, receptor e item)</li>
+                <li>Listar histórico de um usuário específico</li>
+            </ol>
+        </section>
+
+        <section id="fluxo">
+            <h2 class="titulo-secao">Fluxo de uma doação</h2>
+            <div class="linha-tempo">
+                <div class="passo"><span class="num">1</span><h4>Cadastro</h4><p>Doador cria o anúncio do vestuário com categoria, tamanho e faixa etária.</p></div>
+                <div class="passo"><span class="num">2</span><h4>Interesse</h4><p>Receptor visualiza o item na home e demonstra interesse em recebê-lo.</p></div>
+                <div class="passo"><span class="num">3</span><h4>Confirmação</h4><p>Doador confirma ou recusa o interesse recebido, pelo pop-up de confirmação.</p></div>
+                <div class="passo"><span class="num">4</span><h4>Conclusão</h4><p>Doação é marcada como concluída e registrada no histórico de ambos os perfis.</p></div>
+            </div>
+        </section>
+
+        <section id="api">
+            <h2 class="titulo-secao">Rotas da API</h2>
+            <p class="muted">Amostra das rotas REST que o front-end Angular consome.</p>
+            <div class="tabela-wrap">
+                <table class="tabela">
+                    <thead><tr><th>Rota</th><th>Método</th><th>Descrição</th></tr></thead>
+                    <tbody>
+                        <tr><td>/usuarios</td><td>GET / POST</td><td>Lista todos os usuários ou cadastra um novo</td></tr>
+                        <tr><td>/usuarios/&lt;id_usuario&gt;</td><td>GET / PUT</td><td>Busca ou atualiza um usuário específico</td></tr>
+                        <tr><td>/vestuario</td><td>GET / POST</td><td>Lista todos os itens ou cadastra um novo vestuário</td></tr>
+                        <tr><td>/vestuario/&lt;id_vestuario&gt;</td><td>GET / PUT / DELETE</td><td>Busca, atualiza ou remove um vestuário específico</td></tr>
+                        <tr><td>/vestuario/&lt;id_vestuario&gt;/concluir</td><td>POST</td><td>Confirma a conclusão de uma doação</td></tr>
+                        <tr><td>/usuarios/&lt;id_usuario&gt;/vestuario</td><td>GET</td><td>Lista os itens cadastrados por um usuário</td></tr>
+                        <tr><td>/usuarios/&lt;id_usuario&gt;/historico</td><td>GET</td><td>Lista o histórico de doações de um usuário</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="muted">Todas as rotas de escrita validam campos obrigatórios e tipos de dado, retornando <code>400</code>, <code>404</code> ou <code>422</code> com mensagens de erro específicas quando a validação falha.</p>
+        </section>
+
+        <section id="processo">
+            <h2 class="titulo-secao">Processo de design</h2>
+            <p>O protótipo no Figma passou por uma rodada de melhorias em relação à entrega inicial: foi adicionada uma tela de login estruturada, uma barra de navegação consistente entre todas as telas, controle de doações por botões de "recusar" e "confirmar", e padronização de paleta de cores e tipografia em todo o fluxo — aplicando heurísticas de Nielsen como consistência, padrões e liberdade do usuário.</p>
+            <p>O checklist final de qualidade confirmou que todas as telas planejadas estão desenhadas e conectadas no protótipo, com hierarquia visual clara e nomenclatura de frames alinhada à tabela de mapeamento usada pelo time de front-end.</p>
+        </section>
+
+        <div class="rodape-nav">
+            <a class="btn-link" href="gasolinia.html">← GasolinIA</a>
+            <a class="btn-link" href="../Portfólio do Luiz.html#projetos">Todos os projetos</a>
+            <a class="btn-link" href="gametrack.html">GameTrack →</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Luiz - Toledo, Paraná</p>
+    </footer>
+</body>
+</html>
